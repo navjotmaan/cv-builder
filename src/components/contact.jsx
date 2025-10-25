@@ -1,6 +1,7 @@
 export default function GeneralInfo({data, handleChange}) {
     return (
         <div className="info">
+            <h2>General Information</h2>
             <label htmlFor="name">Name: </label>
             <input 
                 name="name" 

@@ -1,6 +1,7 @@
 export default function Education({data, handleChange}) {
     return (
         <div className="info">
+            <h2>Education</h2>
             <label htmlFor="schoolName">School Name: </label>
             <input 
                 name="schoolName" 

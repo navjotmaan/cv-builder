@@ -1,6 +1,7 @@
 export default function Experience({data, handleChange}) {
     return (
         <div className="info">
+            <h2>Experience</h2>
             <label htmlFor="company">Company Name: </label>
             <input 
                 name="company" 
