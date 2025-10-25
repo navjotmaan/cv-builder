@@ -18,7 +18,7 @@ function App() {
     year: "",
     company: "",
     position: "",
-    responsibilities: "",
+    resp: "",
     jobYear: ""
   });
 
@@ -34,9 +34,43 @@ function App() {
     setSubmittedData(formData);
   }
 
+  function editForm() {
+    setSubmittedData(null);
+  }
+
   return (
     <>
-      {!submittedData && (
+      {submittedData ? (
+        <div>
+          <button id='edit' onClick={editForm}>Edit</button>
+          <div className="display-info">
+                <h1 id='name'>{submittedData.name}</h1>
+                <h3>Profile Summary</h3>
+                <p>{submittedData.summary}</p>
+                <hr></hr>
+
+                <h3>Contact</h3>
+                <p><strong>Phone:</strong> {submittedData.phone}</p>
+                <p><strong>Email:</strong> {submittedData.email}</p>
+                <p><strong>LinkedIn:</strong> {submittedData.linkedIn}</p>
+                <p><strong>GitHub:</strong> {submittedData.github}</p>
+                <p><strong>Personal Website:</strong> {submittedData.portfolio}</p>
+                <hr></hr>
+
+                <h3>Education:</h3>
+                <strong>{submittedData.schoolName}</strong>
+                <p>{submittedData.study}</p>
+                <p>{submittedData.year}</p>
+                <hr></hr>
+
+                <h3>Experience:</h3>
+                <p><strong>Company Name:</strong> {submittedData.company}</p>
+                <p><strong>Position title:</strong> {submittedData.position}</p>
+                <p><strong>Responsibilites:</strong> {submittedData.resp}</p>
+                <p><strong>Year:</strong> {submittedData.jobYear}</p>
+            </div>
+          </div>
+      ) : (
         <form id='cv-form' onSubmit={handleSubmit}>
           <h1>CV Application</h1>
           <GeneralInfo data={formData} handleChange={handleChange}/>
@@ -45,35 +79,6 @@ function App() {
 
           <button type="submit" id='submit'>Submit</button>
         </form>
-      )}
-    
-      {submittedData && (
-        <div className="display-info">
-              <h1 id='name'>{submittedData.name}</h1>
-              <h3>Profile Summary</h3>
-              <p>{submittedData.summary}</p>
-              <hr></hr>
-
-              <h3>Contact</h3>
-              <p><strong>Phone:</strong> {submittedData.phone}</p>
-              <p><strong>Email:</strong> {submittedData.email}</p>
-              <p><strong>LinkedIn:</strong> {submittedData.linkedIn}</p>
-              <p><strong>GitHub:</strong> {submittedData.github}</p>
-              <p><strong>Personal Website:</strong> {submittedData.portfolio}</p>
-              <hr></hr>
-
-              <h3>Education:</h3>
-              <strong>{submittedData.schoolName}</strong>
-              <p>{submittedData.study}</p>
-              <p>{submittedData.year}</p>
-              <hr></hr>
-
-              <h3>Experience:</h3>
-              <p><strong>Company Name:</strong> {submittedData.company}</p>
-              <p><strong>Position title:</strong> {submittedData.position}</p>
-              <p><strong>Responsibilites:</strong> {submittedData.resp}</p>
-              <p><strong>Year:</strong> {submittedData.jobYear}</p>
-          </div>
       )}
     </>
   )
