@@ -2,7 +2,7 @@ import { useState } from 'react'
 import GeneralInfo from './components/contact'
 import Education from './components/edu'
 import Experience from './components/exp'
-import './App.css'
+import './styles/App.css'
 
 function App() {
   const [formData, setFormData] = useState({
