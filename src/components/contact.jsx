@@ -64,7 +64,7 @@ function GeneralInfo() {
     );
 }
 
-export function DisplayInfo({data}) {
+function DisplayInfo({data}) {
     return (
         <div className="display-info">
             <h2>General Information:</h2>
