@@ -1,5 +1,6 @@
 .info {
   display: flex;
   flex-direction: column;
+  width: 60vw;
   gap: 10px;
 }
