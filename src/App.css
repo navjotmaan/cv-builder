@@ -1,2 +1,44 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ced4da;
+}
 
+.display-info {
+    margin: auto 200px;
+    padding: 10px 5rem;
+    width: 50vw;
+    font-size: 18px;
+    background-color: white;
+}
 
+#cv-form {
+    text-align: center;
+}
+
+#name {
+    color: #04052e;
+    font-size: 40px;
+}
+
+h3 {
+    color: #343a40;
+}
+
+strong {
+    color: #6c757d;
+}
+
+#submit {
+    background-color: #04052e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #090a5c;
+}

@@ -18,10 +18,9 @@ export default function Experience({data, handleChange}) {
                 onChange={handleChange} 
             />
 
-            <label htmlFor="resp">Responsibilities:</label>
-            <input 
-                name="resp" 
-                id="resp" 
+            <label htmlFor="resp">Responsibilities: </label>
+            <textarea
+                name="resp"
                 value={data.resp}
                 onChange={handleChange} 
             />

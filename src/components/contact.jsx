@@ -10,6 +10,13 @@ export default function GeneralInfo({data, handleChange}) {
                 onChange={handleChange}
             />
 
+            <label htmlFor="summary">Profile Summary: </label>
+            <textarea
+                name="summary"
+                value={data.summary}
+                onChange={handleChange} 
+            />
+
             <label htmlFor="email">Email: </label>
             <input
                 name="email" 
@@ -23,8 +30,31 @@ export default function GeneralInfo({data, handleChange}) {
             <input 
                 name="phone" 
                 id="user-phone" 
-                type="number"
                 value={data.phone}
+                onChange={handleChange} 
+            />
+
+            <label htmlFor="linkedIn">LinkedIn:</label>
+            <input 
+                name="linkedIn" 
+                id="linkedIn" 
+                value={data.linkedIn}
+                onChange={handleChange} 
+            />
+
+            <label htmlFor="github">GitHub:</label>
+            <input 
+                name="github" 
+                id="github"
+                value={data.github}
+                onChange={handleChange} 
+            />
+
+            <label htmlFor="portfolio">Personal Website:</label>
+            <input 
+                name="portfolio" 
+                id="portfolio" 
+                value={data.portfolio}
                 onChange={handleChange} 
             />
         </div>
