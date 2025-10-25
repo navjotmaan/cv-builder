@@ -2,6 +2,7 @@ import { useState } from 'react'
 import GeneralInfo from './components/contact'
 import Education from './components/edu'
 import Experience from './components/exp'
+import Skills from './components/skills'
 import './styles/App.css'
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
     company: "",
     position: "",
     resp: "",
-    jobYear: ""
+    jobYear: "",
+    skills: [""]
   });
 
   const [submittedData, setSubmittedData] = useState(null);
@@ -68,6 +70,14 @@ function App() {
                 <p><strong>Position title:</strong> {submittedData.position}</p>
                 <p><strong>Responsibilites:</strong> {submittedData.resp}</p>
                 <p><strong>Year:</strong> {submittedData.jobYear}</p>
+                <hr></hr>
+
+                <h3>Skills:</h3>
+                <ul>
+                  {submittedData.skills.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
             </div>
           </div>
       ) : (
@@ -76,6 +86,7 @@ function App() {
           <GeneralInfo data={formData} handleChange={handleChange}/>
           <Education data={formData} handleChange={handleChange}/>
           <Experience data={formData} handleChange={handleChange}/>
+          <Skills data={formData} handleChange={handleChange} />
 
           <button type="submit" id='submit'>Submit</button>
         </form>
