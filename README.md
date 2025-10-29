@@ -1,3 +1,7 @@
+# CV-Builder
+
+This is a project where you can generate a CV for you by filling your data in the form. Check it out [here](https://cv-generator-one-liart.vercel.app/)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
